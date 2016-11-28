@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "953012436489",
+    "firebase_url": "https://fastlaundry-4f2ad.firebaseio.com",
+    "project_id": "fastlaundry-4f2ad",
+    "storage_bucket": "fastlaundry-4f2ad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:953012436489:android:20cbcd4a5a603f76",
+        "android_client_info": {
+          "package_name": "id.sch.smktelkom_mlg.project.xirpl206162636.fastlaundry"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "953012436489-ubuad7nfpp3od08mh7mk8sn7env9v7v8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.sch.smktelkom_mlg.project.xirpl206162636.fastlaundry",
+            "certificate_hash": "6FC4BABAA130755EDB420C68CC418E55315CF427"
+          }
+        },
+        {
+          "client_id": "953012436489-sklgenu4l54tlnokqjkohum1qjrdqgm7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBShDzJSIOwTzgyC9FtXpAhuEHECSv6Wh8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "953012436489-sklgenu4l54tlnokqjkohum1qjrdqgm7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
