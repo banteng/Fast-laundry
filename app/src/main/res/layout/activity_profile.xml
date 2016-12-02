@@ -47,10 +47,19 @@
             android:textColor="@android:color/black"
             android:textColorHint="@android:color/black" />
 
+        <TextView
+            android:text="Packet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:textStyle="normal|bold"
+            tools:text="Packet" />
+
         <Spinner
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:id="@+id/spinner"
+            android:id="@+id/spinnerPaket"
+            android:entries="@array/paket"
             />
 
         <Button
