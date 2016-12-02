@@ -8,28 +8,29 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="id.sch.smktelkom_mlg.project.xirpl206162636.fastlaundry.AdminActivity">
-
-    <TextView
-        android:text="Name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+    tools:context="id.sch.smktelkom_mlg.project.xirpl206162636.fastlaundry.AdminActivity"
+    android:background="@mipmap/max">
 
     <EditText
         android:id="@+id/editTextName"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textColorHighlight="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textColorLink="@android:color/holo_blue_bright"
+        android:hint="Name"/>
 
-
-    <TextView
-        android:text="Address"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
 
     <EditText
         android:id="@+id/editTextAddress"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textColorHighlight="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textColorLink="@android:color/holo_blue_bright"
+        android:hint="Address"/>
 
     <Button
         android:id="@+id/buttonSave"
@@ -42,7 +43,8 @@
         android:text="Persons"
         android:textStyle="bold"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white" />
 
     <TextView
         android:id="@+id/textViewPersons"

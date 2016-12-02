@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Fast-laundry.iml" filepath="$PROJECT_DIR$/Fast-laundry.iml" />
       <module fileurl="file://$PROJECT_DIR$/FastLaundry.iml" filepath="$PROJECT_DIR$/FastLaundry.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
