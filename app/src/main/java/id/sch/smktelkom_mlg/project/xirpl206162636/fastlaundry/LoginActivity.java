@@ -1,6 +1,7 @@
 package id.sch.smktelkom_mlg.project.xirpl206162636.fastlaundry;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -46,7 +47,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             //close this activity
             finish();
             //opening profile activity
-            // startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
+            startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
         }
 
         //initializing views
@@ -66,9 +67,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private void userLogin(){
         String email = editTextEmail.getText().toString().trim();
         String password  = editTextPassword.getText().toString().trim();
-        String cek = editTextEmail.getText().toString();
+        String cek = editTextEmail.getText().toString().trim();
 
-        if (cek.startsWith("admin@fastlaundry.com")) {
+        if (cek != ("admin@fastlaundry.com")) {
             if(TextUtils.isEmpty(email)){
                 Toast.makeText(this,"Please enter email",Toast.LENGTH_LONG).show();
                 return;
@@ -94,7 +95,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                             if(task.isSuccessful()){
                                 //start the profile activity
                                 finish();
-                                //startActivity(new Intent(getApplicationContext(), IndexActivity.class));
+                                startActivity(new Intent(getApplicationContext(), IndexActivity.class));
                             }
                             else if(task.isSuccessful() != true){
                                 finish();
@@ -103,43 +104,44 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         }
                     });
         }
-        //checking if email and passwords are empty
-        if(TextUtils.isEmpty(email)){
-            Toast.makeText(this,"Please enter email",Toast.LENGTH_LONG).show();
-            return;
+        else {
+                //checking if email and passwords are empty
+                if (TextUtils.isEmpty(email)) {
+                    Toast.makeText(this, "Please enter email", Toast.LENGTH_LONG).show();
+                    return;
+                }
+
+                if (TextUtils.isEmpty(password)) {
+                    Toast.makeText(this, "Please enter password", Toast.LENGTH_LONG).show();
+                    return;
+                }
+
+                //if the email and password are not empty
+                //displaying a progress dialog
+
+                progressDialog.setMessage("Logging in Please Wait...");
+                progressDialog.show();
+
+                //logging in the user
+                firebaseAuth.signInWithEmailAndPassword(email, password)
+                        .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                progressDialog.dismiss();
+                                //if the task is successfull
+                                if (task.isSuccessful()) {
+                                    //start the profile activity
+                                    finish();
+                                    startActivity(new Intent(getApplicationContext(), AdminActivity.class));
+                                } else if (task.isSuccessful() != true) {
+                                    finish();
+                                    Toast.makeText(getApplicationContext(), "Check your email and password again!", Toast.LENGTH_LONG).show();
+                                }
+                            }
+                        });
+
+            }
         }
-
-        if(TextUtils.isEmpty(password)){
-            Toast.makeText(this,"Please enter password",Toast.LENGTH_LONG).show();
-            return;
-        }
-
-        //if the email and password are not empty
-        //displaying a progress dialog
-
-        progressDialog.setMessage("Logging in Please Wait...");
-        progressDialog.show();
-
-        //logging in the user
-        firebaseAuth.signInWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        progressDialog.dismiss();
-                        //if the task is successfull 
-                        if(task.isSuccessful()){
-                            //start the profile activity
-                            finish();
-                            //startActivity(new Intent(getApplicationContext(), IndexActivity.class));
-                        }
-                        else if(task.isSuccessful() != true){
-                            finish();
-                            Toast.makeText(getApplicationContext(), "Check your email and password again!", Toast.LENGTH_LONG).show();
-                        }
-                    }
-                });
-
-    }
 
     @Override
     public void onClick(View view) {
@@ -149,7 +151,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         if(view == textViewSignup){
             finish();
-            //startActivity(new Intent(this, MainActivity.class));
+            startActivity(new Intent(this, MainActivity.class));
         }
     }
 }

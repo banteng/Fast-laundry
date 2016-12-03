@@ -49,6 +49,50 @@
           "status": 2
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:953012436489:android:0a009642deb7949c",
+        "android_client_info": {
+          "package_name": "com.lonelybox.simplebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "953012436489-vs1do4g87koeshsb3r370773bdjvq9e8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lonelybox.simplebase",
+            "certificate_hash": "6FC4BABAA130755EDB420C68CC418E55315CF427"
+          }
+        },
+        {
+          "client_id": "953012436489-sklgenu4l54tlnokqjkohum1qjrdqgm7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBShDzJSIOwTzgyC9FtXpAhuEHECSv6Wh8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "953012436489-sklgenu4l54tlnokqjkohum1qjrdqgm7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
     }
   ],
   "configuration_version": "1"
