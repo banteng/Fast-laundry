@@ -1,10 +1,9 @@
 package id.sch.smktelkom_mlg.project.xirpl206162636.fastlaundry;
 
 import android.app.ProgressDialog;
-import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -47,7 +46,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             //close this activity
             finish();
             //opening profile activity
-            startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
+            // startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
         }
 
         //initializing views
@@ -95,7 +94,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                             if(task.isSuccessful()){
                                 //start the profile activity
                                 finish();
-                                startActivity(new Intent(getApplicationContext(), IndexActivity.class));
+                                //startActivity(new Intent(getApplicationContext(), IndexActivity.class));
                             }
                             else if(task.isSuccessful() != true){
                                 finish();
@@ -131,7 +130,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         if(task.isSuccessful()){
                             //start the profile activity
                             finish();
-                            startActivity(new Intent(getApplicationContext(), IndexActivity.class));
+                            //startActivity(new Intent(getApplicationContext(), IndexActivity.class));
                         }
                         else if(task.isSuccessful() != true){
                             finish();
@@ -150,7 +149,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         if(view == textViewSignup){
             finish();
-            startActivity(new Intent(this, MainActivity.class));
+            //startActivity(new Intent(this, MainActivity.class));
         }
     }
 }
