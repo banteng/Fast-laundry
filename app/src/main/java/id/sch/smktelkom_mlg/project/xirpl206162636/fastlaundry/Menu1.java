@@ -31,7 +31,7 @@ public class Menu1 extends Fragment implements View.OnClickListener{
 
 		if(firebaseAuth.getCurrentUser() == null){
 			pa.finish();
-			startActivity(new Intent(getActivity(), LoginActivity.class));
+			startActivity(new Intent(getActivity(), ProfileActivity.class));
 		}
 		//databaseReference = FirebaseDatabase.getInstance().getReference();
 		FirebaseUser user = firebaseAuth.getCurrentUser();
@@ -51,7 +51,7 @@ public class Menu1 extends Fragment implements View.OnClickListener{
 		if(view == buttonLogout){
 			firebaseAuth.signOut();
 			pa.finish();
-			startActivity(new Intent(getActivity(), LoginActivity.class));
+			startActivity(new Intent(getActivity(), ProfileActivity.class));
 			}
 	}
 
