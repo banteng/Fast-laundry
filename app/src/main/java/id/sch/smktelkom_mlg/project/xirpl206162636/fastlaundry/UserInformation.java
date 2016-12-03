@@ -10,7 +10,7 @@ public class UserInformation {
     public String address;
     public String phone;
 
-    public UserInformation(String name, String address, String phone) {
+    public UserInformation(String s, String name, String address, String phone) {
         this.name = name;
         this.address = address;
         this.phone = phone;

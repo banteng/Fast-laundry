@@ -81,7 +81,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         String phone = editTextPhone.getText().toString().trim();
 
         //creating a userinformation object
-        UserInformation userInformation = new UserInformation(name, add, phone);
+        UserInformation userInformation = new UserInformation(name, name, add, phone);
 
         //getting the current logged in user
         FirebaseUser user = firebaseAuth.getCurrentUser();

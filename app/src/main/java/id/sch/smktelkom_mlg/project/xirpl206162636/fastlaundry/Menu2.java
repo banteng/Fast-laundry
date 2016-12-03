@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -24,6 +25,7 @@ public class Menu2 extends Fragment implements View.OnClickListener{
 	private FirebaseAuth firebaseAuth;
 	private DatabaseReference databaseReference;
 	private EditText editTextAddress, editTextName, editTextPhone;
+	private Spinner spinnerPaket;
 	ProfileActivity pa = new ProfileActivity();
 
 	@Nullable
@@ -43,6 +45,7 @@ public class Menu2 extends Fragment implements View.OnClickListener{
 		editTextAddress = (EditText) myView.findViewById(R.id.editTextAddress);
 		editTextName = (EditText) myView.findViewById(R.id.editTextName);
 		editTextPhone = (EditText) myView.findViewById(R.id.editTextPhone);
+		spinnerPaket = (Spinner) myView.findViewById(R.id.spinnerPaket);
 
 		buttonSave = (Button) myView.findViewById(R.id.buttonSave);
 
@@ -55,9 +58,10 @@ public class Menu2 extends Fragment implements View.OnClickListener{
 		String name = editTextName.getText().toString().trim();
 		String add = editTextAddress.getText().toString().trim();
 		String phone = editTextPhone.getText().toString().trim();
+		String paket = spinnerPaket.getSelectedItem().toString().trim();
 
 		//creating a userinformation object
-		UserInformation userInformation = new UserInformation(name, add, phone);
+		UserInformation userInformation = new UserInformation(name, add, phone, paket);
 
 		//getting the current logged in user
 		FirebaseUser user = firebaseAuth.getCurrentUser();
@@ -71,6 +75,7 @@ public class Menu2 extends Fragment implements View.OnClickListener{
 		editTextName.setText(null);
 		editTextAddress.setText(null);
 		editTextPhone.setText(null);
+		spinnerPaket.setAdapter(null);
 	}
 
 	@Override
