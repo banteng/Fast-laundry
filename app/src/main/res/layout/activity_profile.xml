@@ -45,7 +45,8 @@
             android:hint="Enter Phone Number"
             android:textColorHighlight="@android:color/black"
             android:textColor="@android:color/black"
-            android:textColorHint="@android:color/black" />
+            android:textColorHint="@android:color/black"
+            android:inputType="phone" />
 
         <TextView
             android:text="Packet"
