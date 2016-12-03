@@ -10,7 +10,20 @@ package="id.sch.smktelkom_mlg.project.xirpl206162636.fastlaundry">
     android:label="Fast Laundry"
     android:supportsRtl="true"
     android:theme="@style/AppTheme">
+    <activity android:name=".MainActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN"/>
+
+            <category android:name="android.intent.category.LAUNCHER"/>
+        </intent-filter>
+    </activity>
+    <activity android:name=".LoginActivity"/>
     <activity android:name=".ProfileActivity"/>
+    <activity
+        android:name=".IndexActivity"
+        android:label="@string/title_activity_index"
+        android:theme="@style/AppTheme.NoActionBar">
+    </activity>
 </application>
 
 </manifest>
