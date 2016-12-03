@@ -19,11 +19,6 @@ package="id.sch.smktelkom_mlg.project.xirpl206162636.fastlaundry">
     </activity>
     <activity android:name=".LoginActivity"/>
     <activity android:name=".ProfileActivity"/>
-    <activity
-        android:name=".IndexActivity"
-        android:label="@string/title_activity_index"
-        android:theme="@style/AppTheme.NoActionBar">
-    </activity>
 </application>
 
 </manifest>
