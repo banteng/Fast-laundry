@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="id.sch.smktelkom_mlg.project.xirpl206162636.fastlaundry.Menu2"
+    android:background="@mipmap/xxx">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#70f2f2f2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your full name"
+            android:textColor="@android:color/white"
+            android:textColorHighlight="@android:color/black"
+            android:textColorHint="@android:color/black" />
+
+
+        <EditText
+            android:id="@+id/editTextAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Address"
+            android:textColor="@android:color/black"
+            android:textColorHighlight="@android:color/black"
+            android:textColorHint="@android:color/black" />
+
+        <EditText
+            android:id="@+id/editTextPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Phone Number"
+            android:textColorHighlight="@android:color/black"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:inputType="phone" />
+
+        <TextView
+            android:text="Packet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:textStyle="normal|bold"
+            tools:text="Packet" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/spinnerPaket"
+            android:entries="@array/paket"
+            />
+
+        <Button
+            android:id="@+id/buttonSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Order"
+            android:background="@color/common_google_signin_btn_text_dark_default" />
+
+    </LinearLayout>
+</RelativeLayout>

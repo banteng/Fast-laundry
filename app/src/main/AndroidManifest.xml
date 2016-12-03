@@ -9,6 +9,8 @@ package="id.sch.smktelkom_mlg.project.xirpl206162636.fastlaundry">
     android:icon="@mipmap/ic_launcher"
     android:label="Fast Laundry"
     android:supportsRtl="true"
-    android:theme="@style/AppTheme"></application>
+    android:theme="@style/AppTheme">
+    <activity android:name=".ProfileActivity"/>
+</application>
 
 </manifest>
