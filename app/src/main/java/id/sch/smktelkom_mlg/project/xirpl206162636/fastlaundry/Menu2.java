@@ -21,12 +21,12 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class Menu2 extends Fragment implements View.OnClickListener{
 
+	ProfileActivity pa = new ProfileActivity();
 	private Button buttonSave;
 	private FirebaseAuth firebaseAuth;
 	private DatabaseReference databaseReference;
 	private EditText editTextAddress, editTextName, editTextPhone;
 	private Spinner spinnerPaket;
-	ProfileActivity pa = new ProfileActivity();
 
 	@Nullable
 	@Override
@@ -37,7 +37,7 @@ public class Menu2 extends Fragment implements View.OnClickListener{
 
 		if(firebaseAuth.getCurrentUser() == null){
 			pa.finish();
-			startActivity(new Intent(getActivity(), LoginActivity.class));
+			startActivity(new Intent(getActivity(), ProfileActivity.class));
 		}
 		databaseReference = FirebaseDatabase.getInstance().getReference();
 		FirebaseUser user = firebaseAuth.getCurrentUser();
